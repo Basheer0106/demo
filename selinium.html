@@ -187,1457 +187,1115 @@
         gtag('config', 'AW-719359309');
     </script>
 <style>
-/* ============================================
-   SELENIUM PAGE - RESPONSIVE FIX
-   Mirrors index.html responsive behavior
-   Add this <link> to your selenium page <head>:
-   <link rel="stylesheet" href="selenium-responsive.css">
-   ============================================ */
-
-/* ── Base Reset ── */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ============================================
-   HEADER
-   ============================================ */
-header.w-100 {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-header .container {
-  height: auto !important;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-/* Ribbon / top bar */
-header > div:first-child {
-  font-size: 14px;
-  padding: 10px 16px;
-  text-align: center;
-  line-height: 1.5;
-}
-
-/* Navbar brand logo */
-.navbar-brand img {
-  height: 40px;
-  width: auto !important;
-}
-
-/* Desktop nav links */
-.navbar-nav .nav-item a,
-.navbar-nav .nav-item > a {
-  font-size: 14px;
-  padding: 8px 12px;
-}
-
-/* Header buttons */
-.header-btn {
-  font-size: 13px;
-  padding: 8px 14px;
-  white-space: nowrap;
-}
-
-/* Mobile hamburger toggle */
-.navbar-toggler {
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-/* Collapsible nav on mobile */
-@media (max-width: 991px) {
-  #main-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background: #fff;
-    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
-    transition: right 0.3s ease;
-    overflow-y: auto;
-    z-index: 1050;
-    padding: 24px 16px;
-  }
-
-  #main-menu.show {
-    right: 0;
-  }
-
-  .main-menu-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    margin: 0 !important;
-  }
-
-  .navbar-nav .nav-item {
-    border-bottom: 1px solid #f0f0f0;
-  }
-
-  .navbar-nav .nav-item a {
-    display: block;
-    padding: 12px 8px;
-    font-size: 15px;
-    color: #273f52;
-  }
-
-  .form-inline {
-    margin-top: 16px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .form-inline .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* ============================================
-   HERO / BANNER SECTION
-   ============================================ */
-.common-section.course_head_bnr_cs {
-  padding: 40px 0 32px;
-}
-
-.course_head_bnr_cs .container {
-  padding: 0 16px;
-}
-
-.course_head_bnr_cs .row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-/* Left column */
-.course_head_bnr_cs .col-md-6:first-child {
-  width: 100%;
-  padding: 0;
-}
-
-/* Right column (form) */
-.course_head_bnr_cs .col-md-6:last-child {
-  width: 100%;
-  padding: 0;
-}
-
-.course_head_bnr_cs .common-title {
-  font-size: clamp(22px, 5vw, 38px);
-  line-height: 1.3;
-}
-
-/* Breadcrumb */
-.course_head_bnr_cs nav ol {
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-/* Rating stars */
-.sim-rating-block {
-  margin-bottom: 16px;
-}
-
-.rating-star img {
-  width: 18px;
-  height: 18px;
-}
-
-/* Checklist paragraphs */
-.course_head_bnr_cs p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Form card */
-#ds > div {
-  padding: 20px !important;
-  border-radius: 10px !important;
-  margin-top: 0 !important;
-}
-
-#ds h3 {
-  font-size: 16px !important;
-  margin-bottom: 16px !important;
-}
-
-#heroForm input,
-#heroForm select,
-#heroForm textarea {
-  width: 100% !important;
-  font-size: 14px !important;
-  padding: 10px 12px !important;
-  border-radius: 6px !important;
-}
-
-#heroForm button[type="submit"] {
-  font-size: 15px !important;
-  padding: 12px !important;
-}
-
-@media (min-width: 768px) {
-  .course_head_bnr_cs .col-md-6:first-child,
-  .course_head_bnr_cs .col-md-6:last-child {
-    width: calc(50% - 12px);
-  }
-}
-
-/* ============================================
-   COUNTER SECTION (Section 1)
-   ============================================ */
+    /* count sections 1 */
 .counter-section {
-  padding: 40px 16px;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.counter-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* .counter-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 30px;
 }
 
 .counter-item {
-  flex: 0 0 calc(50% - 8px);
-  min-width: 120px;
-  padding: 20px 12px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  text-align: center;
+    flex: 1 1 200px;
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+} */
+
+.counter-item:hover {
+    transform: translateY(-5px);
 }
 
 .counter-item .number {
-  font-size: 2rem;
+    font-size: 2.5em;
+    color: #4ad592;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .counter-item p {
-  font-size: 0.95rem;
+    font-size: 1.1em;
+    color: #212529;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
 }
 
-@media (min-width: 576px) {
-  .counter-item {
-    flex: 0 0 calc(25% - 12px);
-  }
+.counter-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-/* ============================================
-   LOGO MARQUEE (Section 2)
-   ============================================ */
+.counter-item {
+    flex: 0 0 calc(25% - 30px); /* Desktop: 4 in a row with gap */
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 768px) {
+    .counter-item {
+        flex: 0 0 calc(50% - 15px); /* 2 items per row with 30px gap */
+    }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 480px) {
+    .counter-item {
+        flex: 0 0 100%;
+    }
+}
+
+
+/* brand slider section 2 */
 .logo-marquee-section {
-  padding: 32px 0;
+  background-color: #f4f4f4;
+  padding: 60px 0;
+  width: 100%;
   overflow: hidden;
 }
 
 .logo-marquee-heading {
-  font-size: clamp(20px, 4vw, 32px);
-  padding: 0 16px;
-  margin-bottom: 24px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: 600;
+}
+
+.logo-marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+}
+
+.logo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2em;
+  text-align: left;
 }
 
 .logo-slide img {
-  width: clamp(80px, 12vw, 120px);
+  width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease;
 }
 
-/* ============================================
-   ABOUT / TRAINING SECTION
-   ============================================ */
-.training-section.courses .row.m-0 {
-  flex-wrap: wrap;
+.logo-slide img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
-.training-section .about-images,
-.training-section .col-12.col-xl-6 {
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 100%;
-  padding-right: 0 !important;
-  margin-bottom: 24px;
+/* Animation: left to right */
+.logo-marquee-left .logo-track {
+  animation: slide-left 40s linear infinite;
 }
 
-.training-section .common-title {
-  font-size: clamp(22px, 4.5vw, 34px);
+@keyframes slide-left {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
-.training-section p {
-  font-size: 14px;
-  line-height: 1.7;
+/* Animation: right to left */
+.logo-marquee-right .logo-track {
+  animation: slide-right 40s linear infinite;
 }
 
-@media (min-width: 1200px) {
-  .training-section .col-xl-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .training-section .about-images {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding-right: 16px !important;
-  }
+@keyframes slide-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* ============================================
-   UPCOMING CLASS / COUNTDOWN
-   ============================================ */
-.timingcourses {
-  margin: 48px 0 32px !important;
-}
-
-.timeboxgreen {
-  padding: 24px 16px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #e8fff7, #c5f5e8);
-}
-
-.timeboxgreen .row.m-0 {
-  flex-wrap: wrap;
-}
-
-.unlock-img,
-.upcoming_mob {
-  width: 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.unlock-img img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.upcoming_mob h2 {
-  font-size: clamp(20px, 4vw, 28px);
-  margin-bottom: 12px;
-}
-
-.upcoming_mob p {
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-
-.launch_date {
+.info-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
 }
 
-.launch_date h3 {
-  font-size: clamp(14px, 3vw, 18px);
+.info-card {
+  background-color: #eaf7f6;
+  border-radius: 16px;
+  padding: 1.5rem;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.knw button {
-  background: #15c872;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+.main-info {
+  flex: 2;
+  text-align: center;
+}
+
+.main-info h3 {
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  cursor: pointer;
-  font-size: 14px;
 }
 
-@media (min-width: 992px) {
-  .unlock-img { flex: 0 0 58.33%; max-width: 58.33%; }
-  .upcoming_mob { flex: 0 0 41.67%; max-width: 41.67%; padding-left: 24px; }
+.main-info hr {
+  border: none;
+  border-top: 1px solid #cde4e2;
+  margin: 0.75rem 0 1rem;
 }
 
-/* ============================================
-   WHY CHOOSE TESTLEAF (features-section)
-   ============================================ */
+.job-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.job-block {
+  text-align: center;
+}
+
+.job-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #1e5f5b;
+  letter-spacing: 0.5px;
+}
+
+.job-salary {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.job-divider {
+  width: 1px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+.side-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.side-block {
+  margin: 10px 0;
+}
+
+.side-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #1e5f5b;
+  margin-bottom: 4px;
+}
+
+.side-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* code section 4 */
+
 .features-section {
-  padding: 40px 16px;
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
 }
 
 .features-section h2 {
-  font-size: clamp(20px, 4vw, 30px);
-  margin-bottom: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .feature-item {
-  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 5px solid #04dba7;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s ease;
 }
 
 .feature-item h4 {
-  font-size: 1.05rem;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #222;
 }
 
-@media (min-width: 600px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* .feature-item .highlight {
+  color: #f9a825;
+} */
+
+.feature-item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
-@media (min-width: 992px) {
-  .features-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.feature-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
 }
 
-/* ============================================
-   SELENIUM TRAINING FEATURES (green cards)
-   ============================================ */
-.features_green .about-items-wrapper .row {
-  flex-wrap: wrap;
-}
+/* code section 5 */
 
-.features_green .col-lg-4 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-
-.features_green .about-item {
-  padding: 16px;
-  border-radius: 8px;
-  background: #f8f8f8;
-  height: 100%;
-}
-
-.selinium-auto {
-  width: 50px !important;
-  height: 50px;
-  object-fit: contain;
-  margin-bottom: 12px;
-}
-
-@media (min-width: 576px) {
-  .features_green .col-lg-4 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 992px) {
-  .features_green .col-lg-4 {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-  }
-}
-
-/* ============================================
-   WHO CAN ENROLL (eligibility-section)
-   ============================================ */
 .eligibility-section {
-  padding: 40px 16px;
+  /* background: linear-gradient(135deg, #081d45, #0b2a5f); */
+  background: linear-gradient(135deg, #36e1c1, #008161);
+  color: #fff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .eligibility-section h2 {
-  font-size: clamp(20px, 4vw, 30px);
-  margin-bottom: 24px;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.eligibility-section .highlight {
+  color: #ffd700;
 }
 
 .eligibility-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  text-align: center;
 }
 
 .eligibility-item {
-  padding: 20px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.eligibility-item:hover {
+  transform: translateY(-5px);
 }
 
 .eligibility-item img {
-  width: 44px;
-  margin-bottom: 12px;
+  width: 50px;
+  margin-bottom: 15px;
+  /* filter: invert(100%) brightness(150%); */
 }
 
 .eligibility-item h4 {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 .eligibility-item p {
-  font-size: 13px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  line-height: 1.4;
+  text-align: left;
 }
 
-@media (min-width: 600px) {
-  .eligibility-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* code section 6 */
+
+.course-flow {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.course-flow h2 {
+  font-size: 1.8em;
+  color: #0033cc;
+  margin-bottom: 40px;
+}
+
+.flow-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.flow-step {
+  background-color: #f8f8f8;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  min-height: 140px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.flow-step h3 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #222;
+}
+
+.flow-step p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Arrow between steps */
+.flow-arrow {
+  width: 60px;
+  height: 2px;
+  position: relative;
+  background-image: linear-gradient(to right, #ccc 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: top;
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+}
+
+.flow-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #ccc;
+}
+
+/* Call back button */
+.callback-btn-wrapper {
+  margin-top: 40px;
+}
+
+.callback-btn {
+  background-color: #15c872;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.callback-btn:hover {
+  background-color: #0cd172;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .flow-container {
+    flex-direction: column;
+  }
+
+  .flow-arrow {
+    width: 2px;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #ccc 33%, rgba(255, 255, 255, 0) 0%);
+    background-size: 2px 10px;
+    background-repeat: repeat-y;
+    text-align: left;
+  }
+
+  .flow-arrow::after {
+    left: -5px;
+    top: auto;
+    bottom: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #ccc;
+    transform: none;
   }
 }
+/* code section 7 */
 
-@media (min-width: 992px) {
-  .eligibility-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.benefits-section {
+  background-color: #e7f8f8;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-/* ============================================
-   TRAINING PROCESS
-   ============================================ */
+.benefits-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+.benefit-item {
+  background: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.benefit-item:hover {
+  transform: translateY(-4px);
+}
+
+.benefit-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.benefit-item p {
+  font-size: 1em;
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+  text-align: left;
+}
+
+.enroll-btn-wrap {
+  text-align: center;
+}
+
+.enroll-btn {
+  background-color: #00c4a7;
+  color: #fff;
+  padding: 14px 28px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+.enroll-btn:hover {
+  background-color: #009f8a;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    flex-direction: row;
+  }
+}
+/* code section 8 */
+
 .training-process {
-  padding: 40px 16px;
+  padding: 2rem;
+  text-align: center;
+  font-family: sans-serif;
 }
 
 .training-process h2 {
-  font-size: clamp(20px, 4vw, 32px);
-  margin-bottom: 24px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .process-steps {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .step {
-  width: clamp(100px, 18vw, 150px);
+  width: 150px;
   text-align: center;
 }
 
 .step img {
-  width: clamp(44px, 8vw, 60px);
-  height: auto;
-}
-
-.step p {
-  font-size: 13px;
-  margin-top: 8px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
 .arrow {
-  font-size: clamp(18px, 3vw, 24px);
-  color: #888;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-@media (max-width: 600px) {
-  .process-steps {
-    flex-direction: column;
-  }
-  .arrow {
-    transform: rotate(90deg);
-  }
+.progress-bar-container {
+  margin-top: 2rem;
+  text-align: center;
 }
 
-/* ============================================
-   RESPONSIVE SLIDER IMAGE
-   ============================================ */
-.responsive-image-section {
-  padding: 16px;
+.gear-icons img {
+  width: 40px;
+  margin: 0 5px;
 }
 
-.responsive-image-section img {
-  border-radius: 16px;
+.progress {
+  position: relative;
+  background-color: #eee;
+  border-radius: 10px;
+  height: 20px;
+  width: 200px;
+  margin: 0.5rem auto;
 }
 
-/* ============================================
-   SKILLS YOU WILL LEARN
-   ============================================ */
+.progress .bar {
+  height: 100%;
+  background-color: orange;
+  border-radius: 10px;
+}
+
+.progress span {
+  position: absolute;
+  right: 10px;
+  top: -25px;
+  font-weight: bold;
+}
+/* code section 9 */
+
 .skills-section {
-  padding: 40px 16px;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* text-align: center; */
 }
 
 .skills-section h3 {
-  font-size: clamp(20px, 4vw, 32px);
-  margin-bottom: 24px;
-  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   list-style: none;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .skills-list li {
-  padding: 14px 16px;
-  font-size: 14px;
-}
-
-@media (min-width: 480px) {
-  .skills-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .skills-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ============================================
-   BENEFITS SECTION
-   ============================================ */
-.benefits-section {
-  padding: 40px 16px;
-}
-
-.benefits-section h2 {
-  font-size: clamp(20px, 4vw, 32px);
-  margin-bottom: 24px;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  max-width: 100%;
-  margin: 0 0 24px 0;
-}
-
-.benefit-item {
-  flex-direction: row;
-  align-items: center;
-  padding: 14px 16px;
-  border-radius: 10px;
-}
-
-.benefit-item img {
-  width: 40px;
-  height: 40px;
-  margin-right: 14px;
-  flex-shrink: 0;
-}
-
-.benefit-item p {
-  font-size: 14px;
-}
-
-.enroll-btn-wrap {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.enroll-btn {
-  display: inline-block;
-  font-size: 15px;
-  padding: 12px 24px;
-  border-radius: 6px;
-}
-
-@media (min-width: 600px) {
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ============================================
-   CTA SECTION (Become a Certified Selenium Expert)
-   ============================================ */
-.cta_slight .row.m-0 {
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-}
-
-.drop_new,
-.h3_dropp {
-  width: 100%;
-  text-align: center;
-}
-
-.drop_new .main-title {
-  font-size: clamp(22px, 5vw, 36px);
-}
-
-.h3_dropp h3 {
-  font-size: clamp(16px, 3vw, 22px);
-}
-
-.h3_dropp h3 a {
-  display: inline-block;
-  background: #15c872;
-  color: #fff;
-  padding: 12px 28px;
+  background-color: #6de9d2;
+  padding: 1rem 1.15rem;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 0.9rem;
+  color: #193855;
+  border: 1px solid #4cccb3;
+  text-align: left;
+  transition: transform 0.2s ease;
 }
 
-.h3_dropp h3 a:hover {
-  background: #0daa60;
+.skills-list li:hover {
+  transform: translateY(-3px);
 }
 
-@media (min-width: 992px) {
-  .drop_new { width: 75%; text-align: left; }
-  .h3_dropp { width: 25%; text-align: right; }
-}
-
-/* ============================================
-   YOUTUBE VIDEO EMBEDS
-   ============================================ */
-.youtube_video iframe {
-  width: 100% !important;
-  border-radius: 8px;
-}
-
-.youtube_video .col-xl-5 iframe,
-.training-section .col-xl-5 iframe {
-  width: 100% !important;
-  height: 250px;
-  border-radius: 8px;
-}
-
-/* ============================================
-   SOCIAL / OFFER SECTION
-   ============================================ */
-.social-icoo .row.m-0 {
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.social-icoo .col-lg-6,
-.social-icoo .col-lg-3 {
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 100%;
-}
-
-.media-icons {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.media-icons li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.media-icons img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-.tab_enroll {
-  justify-content: flex-start !important;
-}
-
-@media (min-width: 992px) {
-  .social-icoo .col-lg-6 { flex: 0 0 50%; max-width: 50%; }
-  .social-icoo .col-lg-3 { flex: 0 0 25%; max-width: 25%; }
-  .tab_enroll { justify-content: flex-end !important; }
-}
-
-/* ============================================
-   TRAINER BIO
-   ============================================ */
-.trainer_bio .row {
-  flex-wrap: wrap;
-}
-
-.trainer_bio .col-lg-6 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 24px;
-}
-
-.inline_bio {
-  background: #f8f8f8;
-  border-radius: 10px;
-  padding: 20px;
-  height: 100%;
-}
-
-.inline_bio .row {
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.inline_bio .col-lg-5,
-.inline_bio .col-md-4 {
-  flex: 0 0 120px;
-  max-width: 120px;
-}
-
-.inline_bio .col-lg-5 img,
-.inline_bio .col-md-4 img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.inline_bio .col-lg-7,
-.inline_bio .col-md-8 {
-  flex: 1;
-  min-width: 0;
-}
-
-.bio_subb h3 {
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-.bio_subb h6 {
-  font-size: 13px;
-  color: #666;
-}
-
-.bio_iclass .ul_new {
-  list-style: none;
-  padding: 0;
-  margin-top: 12px;
-}
-
-.bio_iclass .ul_new li {
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-  color: #444;
-}
-
-@media (min-width: 992px) {
-  .trainer_bio .col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-/* ============================================
-   BEST WAY TO LEARN SELENIUM (dark section)
-   ============================================ */
-.bestway-selinium .row.m-0 {
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.bestway-selinium .col-md-6 {
-  width: 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 0;
-}
-
-.bestway-selinium p {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.bestway-selinium iframe {
-  width: 100% !important;
-  height: 220px;
-  border-radius: 8px;
-}
-
-.countt {
-  margin-top: 24px;
-}
-
-.countt .col-lg-12 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-}
-
-#launching-date {
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.countt a {
-  display: inline-block;
-  background: #15c872;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  .bestway-selinium .col-md-6 {
-    flex: 0 0 calc(50% - 10px);
-    max-width: calc(50% - 10px);
-  }
-  .bestway-selinium iframe {
-    height: 280px;
-  }
-}
-
-/* ============================================
-   TESTIMONIAL / VIDEO SECTION
-   ============================================ */
-.testimonial_S {
-  padding: 40px 16px;
-}
-
-.testimonial_S .heading_S {
-  font-size: clamp(20px, 4vw, 28px);
-  margin-bottom: 24px;
-}
-
-/* html5gallery responsive override */
-.html5gallery-container-0 {
-  width: 100% !important;
-  max-width: 492px;
-  margin: 0 auto !important;
-  position: relative !important;
-}
-
-/* ============================================
-   CERTIFICATION SECTION
-   ============================================ */
-section.training-section.courses .row.m-0 {
-  flex-wrap: wrap;
-}
-
-/* ============================================
-   ACCORDION / WEEKLY TRAINING
-   ============================================ */
-.accordian_new {
-  padding: 40px 16px;
-}
-
-.accordian_new h3 {
-  font-size: clamp(20px, 4vw, 28px);
-  margin-bottom: 24px;
-}
-
-.accordian_new .col-lg-6 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  margin-bottom: 16px;
-}
-
-.accordion .card-header a {
-  font-size: 14px;
-  padding: 12px 8px;
-}
-
-.accordion .card-body {
-  padding: 16px !important;
-}
-
-.ul_li {
-  padding-left: 16px;
-  margin: 0;
-}
-
-.ul_li li {
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-
-@media (min-width: 992px) {
-  .accordian_new .col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-/* ============================================
-   TESTIMONIALS 2 (Screenshots)
-   ============================================ */
-.testimonials_2 {
-  padding: 40px 16px;
-}
-
-.testimonials_2 h2 {
-  font-size: clamp(20px, 4vw, 28px);
-}
-
-.feedback_h {
-  flex-wrap: wrap !important;
-  gap: 12px;
-  justify-content: center !important;
-}
-
-.feedback_h .mr-2,
-.feedback_h .ml-2 {
-  margin: 0 !important;
-  flex: 0 0 calc(50% - 6px);
-  max-width: calc(50% - 6px);
-}
-
-.feedback_h .cardd img {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 480px) {
-  .feedback_h .mr-2,
-  .feedback_h .ml-2 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* ============================================
-   ENQUIRY FORM SECTION
-   ============================================ */
-#course_enquiry {
-  padding: 40px 16px;
-}
-
-#course_enquiry .course_career_frm {
-  font-size: clamp(18px, 4vw, 28px);
-  margin-bottom: 24px;
-}
-
-.enquiry.course_li {
-  padding: 0;
-}
-
-.enquiry.course_li .row.m-0 {
-  width: 100%;
-}
-
-.enquiry li {
-  list-style: none;
-  width: 100%;
-  margin-bottom: 12px;
-}
-
-.enquiry .txt {
-  display: block;
-  width: 100%;
-}
-
-.enquiry .txt h6 {
-  font-size: 13px;
-  margin-bottom: 4px;
-  color: #fff;
-}
-
-.page-txt {
-  width: 100% !important;
-  padding: 10px 12px !important;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  background: rgba(255,255,255,0.95);
-}
-
-.left-control {
-  flex: 0 0 100% !important;
-  max-width: 100% !important;
-}
-
-.course_fm_btn {
-  width: 100%;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-@media (min-width: 768px) {
-  .enquiry li:not(.flex-item) {
-    flex: 0 0 calc(50% - 16px);
-    max-width: calc(50% - 16px);
-    margin-right: 16px;
-  }
-  .left-control {
-    flex: 0 0 calc(50% - 16px) !important;
-    max-width: calc(50% - 16px) !important;
-  }
-}
-
-/* ============================================
-   FAQ SECTION
-   ============================================ */
-.faq_course {
-  padding: 40px 16px;
-}
-
-.faq_course .common-title span {
-  font-size: clamp(22px, 4vw, 32px);
-}
-
-#faq .card-header a {
-  font-size: 14px;
-  padding: 12px 32px 12px 8px;
-  line-height: 1.4;
-}
-
-#faq .card-body {
-  font-size: 14px;
-  padding: 12px 16px;
-  line-height: 1.6;
-}
-
-/* ============================================
-   BLOG CARDS
-   ============================================ */
-.courses-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding: 0;
-  list-style: none;
-}
-
-.courses-list li {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.common-card {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
-.contact-wrapper2 {
-  height: 180px !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-.blog-card-content {
-  padding: 16px !important;
-}
-
-.blog-card-content h5 {
-  font-size: 15px;
-  margin-bottom: 12px !important;
-}
-
-@media (min-width: 576px) {
-  .courses-list li {
-    flex: 0 0 calc(50% - 8px);
-    max-width: calc(50% - 8px);
-  }
-}
-
-@media (min-width: 992px) {
-  .courses-list li {
-    flex: 0 0 calc(33.33% - 11px);
-    max-width: calc(33.33% - 11px);
-  }
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-footer.w-100 {
-  padding: 40px 16px 24px;
-}
-
-footer .container .row.m-0 {
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-footer .col-12.col-md-6.col-lg-5 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding-right: 0 !important;
-}
-
-footer .navbar-brand img {
-  height: 36px;
-}
-
-footer .address-block p {
-  font-size: 13px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-footer .address-block img {
-  width: 18px !important;
-  height: 18px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.quick-links {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.quick-links p {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.quick-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.quick-links ul li {
-  margin-bottom: 8px;
-}
-
-.quick-links ul li a {
-  font-size: 13px;
-  color: #444;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.quick-links ul li a:hover {
-  color: #15c872;
-}
-
-/* Social media icons in footer */
-footer .media-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-footer .media-icons li {
-  margin: 0;
-}
-
-footer .media-icons img {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-}
-
-@media (min-width: 768px) {
-  footer .col-12.col-md-6.col-lg-5:first-child {
-    flex: 0 0 40%;
-    max-width: 40%;
-  }
-  footer .col-12.col-md-6.col-lg-5:nth-child(2) {
-    flex: 0 0 45%;
-    max-width: 45%;
-  }
-  footer .col-12.col-lg-2 {
-    flex: 0 0 15%;
-    max-width: 15%;
-  }
-}
-
-/* ============================================
-   SUB-FOOTER
-   ============================================ */
-.sub-footer {
-  padding: 16px;
-}
-
-.copy-block {
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.terms-text {
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 12px;
-}
-
-.terms-text a {
-  font-size: 12px;
-  color: #666;
-  text-decoration: none;
-  margin: 0 !important;
-}
-
-.copy-block p {
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  width: 100%;
-}
-
-/* ============================================
-   PAGE BUTTONS (general)
-   ============================================ */
-.page-btn {
-  min-width: 160px;
-  font-size: 14px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  background: #15c872;
-  color: #fff;
-  border: none;
-  transition: background 0.3s;
-}
-
-.page-btn:hover {
-  background: #0daa60;
-}
-
-.page-btn img {
-  width: 18px;
-  height: 18px;
-}
-
-/* ============================================
-   OFFER / CTA STRIP
-   ============================================ */
-.common-section.offer .row.m-0 {
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-}
-
-.common-section.offer .col-12.col-md-6 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  text-align: center;
-}
-
-.common-section.offer .col-12.col-md-3 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.common-section.offer .d-flex.justify-content-md-end {
-  justify-content: center !important;
-}
-
-@media (min-width: 768px) {
-  .common-section.offer .col-12.col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-    text-align: left;
-  }
-  .common-section.offer .col-12.col-md-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-  .common-section.offer .d-flex.justify-content-md-end {
-    justify-content: flex-end !important;
-  }
-}
-
-/* ============================================
-   CAREER PATH SECTION (4 cards)
-   ============================================ */
-.career .has-card .row.m-0 {
-  flex-wrap: wrap;
-}
-
-.career .has-card .col-sm-6 {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 0;
-  margin-bottom: 16px;
-}
-
-.common-card-career {
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-@media (min-width: 576px) {
-  .career .has-card .col-sm-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-/* ============================================
-   MISC UTILITY
-   ============================================ */
-
-/* Prevent horizontal scroll */
-body {
-  overflow-x: hidden;
-}
-
-/* Section headings */
-h2.m-0.common-title {
-  font-size: clamp(20px, 4.5vw, 36px);
-}
-
-/* Info card (salary info) */
-.info-container {
-  flex-wrap: wrap;
-  padding: 0 16px;
-}
-
-.info-card {
-  flex: 0 0 100%;
-}
-
-.main-info {
-  flex: 0 0 100%;
-}
-
-.job-info {
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-@media (min-width: 640px) {
-  .info-container {
-    flex-wrap: nowrap;
-  }
-  .info-card {
-    flex: 1;
-  }
-}
-
-/* WhatsApp floating button */
+/* whatsapp floating button */
 .floating_btn {
+  position: fixed;
+  bottom: 0px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  z-index: 1000;
+}
+
+@keyframes pulsing {
+  to {
+    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+  }
+}
+
+.contact_icon {
+  background-color: #003719;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size:30px;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translatey(0px);
+  /* animation: pulse 1.5s infinite; */
+  box-shadow: 0 0 0 0 #42db87;
+  /* -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1); */
+  font-weight: normal;
+  font-family: sans-serif;
+  text-decoration: none !important;
+  transition: all 300ms ease-in-out;
+}
+
+
+/* .text_icon {
+  margin-top: 8px;
+  color: #000000;
+  font-size: 13px;
+} */
+
+
+
+</style>
+
+<script async="" src="https://conversations-widget.brevo.com/brevo-conversations.js"></script><style type="text/css" data-creator="html5gallery"> .html5gallery-container-0 { display:block; position:absolute; left:0px; top:0px; width:492px; height:344px;  background-color:#ffffff;} .html5gallery-container-0 { -moz-box-shadow: 0px 2px 5px #aaa; -webkit-box-shadow: 0px 2px 5px #aaa; box-shadow: 0px 2px 5px #aaa;} .html5gallery-box-0 {display:block; position:absolute; text-align:center; left:6px; top:6px; width:480px; height:272px;} .html5gallery-title-text-0  {color:#ffffff; font-size:14px; font-family:Arial,Helvetica,sans-serif; overflow:hidden; text-align:left; padding:10px 0px 10px 10px; background:rgb(102, 102, 102) transparent; background: rgba(102, 102, 102, 0.6); filter:'progid:DXImageTransform.Microsoft.gradient(startColorstr=#99666666, endColorstr=#99666666)'; -ms-filter:'progid:DXImageTransform.Microsoft.gradient(startColorstr=#99666666, endColorstr=#99666666)'; } .html5gallery-title-text-0  a {color:#ffffff;} .html5gallery-error-0  {text-align:center; color:#ff0000; font-size:14px; font-family:Arial, sans-serif;} .html5gallery-description-text-0  {color:#ffffff; font-size:13px; font-family:Arial,Helvetica,sans-serif; overflow:hidden; text-align:left; padding:0px 0px 10px 10px; background:rgb(102, 102, 102) transparent; background: rgba(102, 102, 102, 0.6); filter:'progid:DXImageTransform.Microsoft.gradient(startColorstr=#99666666, endColorstr=#99666666)'; -ms-filter:'progid:DXImageTransform.Microsoft.gradient(startColorstr=#99666666, endColorstr=#99666666)'; } .html5gallery-description-text-0  a {color:#ffffff;} .html5gallery-fullscreen-title-0 {color:#333333; font:bold 12px Arial,Helvetica,sans-serif; overflow:hidden; white-space:normal; line-height:18px;} .html5gallery-fullscreen-title-0 a {color:#333333;} .html5gallery-fullscreen-description-0 {color:#333333; font:normal 12px Arial,Helvetica,sans-serif; overflow:hidden; white-space:normal; line-height:14px;} .html5gallery-fullscreen-description-0 a {color:#333333;} .html5gallery-viral-0 {display:block; overflow:hidden; position:absolute; text-align:left; top:0px; left:0px; width:480px; height:0px; padding-top:-12px;} .html5gallery-title-0 {display:none; overflow:hidden; position:absolute; left:0px; width:480px; top:0px; height:auto; } .html5gallery-timer-0 {display:block; position:absolute; top:270px; left:0px; width:0px; height:2px; background-color:#ccc; filter:alpha(opacity=60); opacity:0.6; } .html5gallery-elem-0 {display:block; overflow:hidden; position:absolute; top:0px; left:0px; width:480px; height:272px;} .html5gallery-loading-0 {display:block; position:absolute; top:4px; right:4px; width:100%; height:100%; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/loading.gif') no-repeat top right;} .html5gallery-loading-center-0 {display:block; position:absolute; top:0px; left:0px; width:100%; height:100%; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/loading_center.gif') no-repeat center center;} .html5gallery-car-0 { position:absolute; display:block; overflow:hidden; left:6px; top:278px; width:480px; height:60px;border-top:1px solid #666666;border-bottom:1px solid #111111;background-color: #292c31; background: #292c31 -webkit-gradient(linear, left top, left bottom, from(#494f54), to(#292c31)) no-repeat; background: #292c31 -moz-linear-gradient(top, #494f54, #292c31) no-repeat; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#494f54, endColorstr=#292c31) no-repeat; -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#494f54, endColorstr=#292c31)' no-repeat;} .html5gallery-car-list-0 { position:absolute; display:block; overflow:hidden; left:4px; width:472px; top:0px; height:60px; } .html5gallery-car-left-0 { position:absolute; overflow:hidden; width:32px; height:32px; left:0px; top:14px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/carousel_left.png') no-repeat 0px 0px;}  .html5gallery-car-right-0 { position:absolute; overflow:hidden; width:32px; height:32px; right:0px; top:14px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/carousel_right.png') no-repeat 0px 0px;} .html5gallery-thumbs-0 { position:relative; display:block; margin-left:102px; width:204px; top:6px; } .html5gallery-car-mask-0 { position:absolute; display:block; text-align:left; overflow:hidden; left:32px; width:408px; top:0px; height:60px;}  .html5gallery-tn-0 { display:block; float:left; margin-left:2px; margin-right:2px; text-align:center; cursor:pointer; width:64px;height:48px;overflow:hidden;} .html5gallery-tn-selected-0 { display:block; float:left; margin-left:2px; margin-right:2px;text-align:center; cursor:pointer; width:64px;height:48px;overflow:hidden;} .html5gallery-tn-0 {background-color:;} .html5gallery-tn-0 { filter:alpha(opacity=80); opacity:0.8; }  .html5gallery-tn-selected-0 { filter:alpha(opacity=100); opacity:1; }  .html5gallery-tn-img-0 {display:block; overflow:hidden; width:64px;height:48px;} .html5gallery-tn-selected-0 {background-color:#ffffff;} .html5gallery-tn-title-0 {display:none;}.html5gallery-container-0 div {box-sizing:content-box;}</style><style type="text/css" data-creator="html5gallery"> .html5gallery-toolbox-0 {display:none;} .html5gallery-toolbox-bg-0 {display:none;} .html5gallery-toolbox-buttons-0 {display:block;} .html5gallery-play-0 { position:absolute; display:none; cursor:pointer; top:216px; left:378px; width:48px; height:48px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/side_play.png') no-repeat top left;}  .html5gallery-pause-0 { position:absolute; display:none; cursor:pointer; top:216px; left:378px; width:48px; height:48px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/side_pause.png') no-repeat top left;}  .html5gallery-left-0 { position:absolute; display:none; cursor:pointer; top:112px; left:0px; width:48px; height:48px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/side_prev.png') no-repeat center center;}  .html5gallery-right-0 { position:absolute; display:none; cursor:pointer; top:112px; left:426px; width:48px; height:48px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/side_next.png')  no-repeat center center;}  .html5gallery-lightbox-0 {position:absolute; display:none; cursor:pointer; top:216px; left:426px; width:48px; height:48px; background:url('https://assets.testleaf.com/assets/js/skins/horizontal/side_lightbox.png') no-repeat top left;} </style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/719359309/?random=1778854983068&amp;cv=11&amp;fst=1778854983068&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be65d0v9165190456z89117903509za20gzb9117903509zd9117903509xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938466~115938469~116701381&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.testleaf.com%2Fcourse%2Fselenium-automation-certification-training-course.html&amp;rcb=19&amp;frm=0&amp;tiba=Selenium%20Training%20in%20Chennai%20%7C%20Learn%20Automation%20at%20Testleaf&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1974902560.1778844679&amp;uaa=x86&amp;uab=64&amp;uafvl=Microsoft%2520Edge%3B147.0.3912.72%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.102&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/719359309/?random=1778854983122&amp;cv=11&amp;fst=1778854983122&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be65d0v9165190456za20gzb9117903509zd9117903509xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938466~115938469~116701381&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.testleaf.com%2Fcourse%2Fselenium-automation-certification-training-course.html&amp;rcb=19&amp;frm=0&amp;tiba=Selenium%20Training%20in%20Chennai%20%7C%20Learn%20Automation%20at%20Testleaf&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1974902560.1778844679&amp;uaa=x86&amp;uab=64&amp;uafvl=Microsoft%2520Edge%3B147.0.3912.72%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.102&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script><style>@-webkit-keyframes brevo-conversations-chat-appear-from-bottom {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px) scale(.97);
+    transform: translateY(20px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes brevo-conversations-chat-appear-from-bottom {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px) scale(.97);
+    transform: translateY(20px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+@-webkit-keyframes brevo-conversations-chat-appear-from-top {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px) scale(.97);
+    transform: translateY(-20px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes brevo-conversations-chat-appear-from-top {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px) scale(.97);
+    transform: translateY(-20px) scale(.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+}
+@-webkit-keyframes brevo-conversations-chat-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes brevo-conversations-chat-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes brevo-conversations-round-button-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes brevo-conversations-round-button-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes brevo-conversations-tab-button-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes brevo-conversations-tab-button-appear {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes brevo-conversations-transparent-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes brevo-conversations-transparent-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+html.brevo-conversations-mobile-widget-expanded,
+body.brevo-conversations-mobile-widget-expanded {
+  overflow: hidden !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: fixed !important;
+  margin: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+.brevo-conversations {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  max-height: calc(100% - 40px);
+  max-width: calc(100% - 40px);
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-transition-property: visibility,opacity;
+  transition-property: visibility,opacity;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: auto;
+  height: auto;
+  min-height: 0;
+  min-width: 0;
+  display: block;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  margin: 0;
+}
+@media print {
+  .brevo-conversations {
+    display: none;
+  }
+}
+.brevo-conversations__iframe {
+  color-scheme: light;
+}
+.brevo-conversations__iframe-wrapper,
+.brevo-conversations__iframe {
+  left: 0 !important;
+  top: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  background: transparent !important;
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+.brevo-conversations__iframe-wrapper {
+  position: absolute;
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1),0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 3px rgba(0,0,0,0.1),0 0 10px rgba(0,0,0,0.3);
+  overflow: hidden !important;
+}
+.brevo-conversations__iframe-wrapper,
+.brevo-conversations--safari .brevo-conversations__iframe,
+.brevo-conversations--webkit.brevo-conversations--expanded .brevo-conversations__iframe {
+  border-radius: 12px;
+}
+.brevo-conversations--mobile-widget:not(.brevo-conversations--expanded),
+.brevo-conversations--mobile-widget:not(.brevo-conversations--expanded) * {
+  cursor: pointer;
+}
+.brevo-conversations--safari .brevo-conversations__iframe {
+  -webkit-mask-image: -webkit-gradient(linear,left top, left bottom,from(#000),to(#000));
+  -webkit-mask-image: linear-gradient(#000,#000);
+  mask-image: -webkit-gradient(linear,left top, left bottom,from(#000),to(#000));
+  mask-image: linear-gradient(#000,#000);
+  -webkit-mask-position: 50% 50%;
+  mask-position: 50% 50%;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+.brevo-conversations:not(.brevo-conversations--expanded) .brevo-conversations__iframe-wrapper {
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+}
+.brevo-conversations:not(.brevo-conversations--expanded):hover .brevo-conversations__iframe-wrapper {
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1),0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 3px rgba(0,0,0,0.1),0 0 15px rgba(0,0,0,0.4);
+}
+.brevo-conversations--visible {
+  visibility: visible;
+  opacity: 1;
+}
+.brevo-conversations--animating {
+  -webkit-transition: 350ms cubic-bezier(.25,.1,0,1);
+  transition: 350ms cubic-bezier(.25,.1,0,1);
+  -webkit-transition-property: height,width,max-width,max-height,top,bottom,left,right,-webkit-transform;
+  transition-property: height,width,max-width,max-height,top,bottom,left,right,-webkit-transform;
+  transition-property: height,width,max-width,max-height,top,bottom,left,right,transform;
+  transition-property: height,width,max-width,max-height,top,bottom,left,right,transform,-webkit-transform;
+}
+.brevo-conversations--style-round:not(.brevo-conversations--expanded) .brevo-conversations__iframe-wrapper,
+.brevo-conversations--style-round.brevo-conversations--safari:not(.brevo-conversations--expanded) .brevo-conversations__iframe {
+  border-radius: 50%;
+}
+.brevo-conversations--custom-button:not(.brevo-conversations--expanded) {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.brevo-conversations--fast-toggle.brevo-conversations--style-round:not(.brevo-conversations--expanded) .brevo-conversations__iframe-wrapper {
+  -webkit-animation: brevo-conversations-round-button-appear 150ms ease-out 50ms both;
+  animation: brevo-conversations-round-button-appear 150ms ease-out 50ms both;
+}
+.brevo-conversations--fast-toggle.brevo-conversations--style-tab:not(.brevo-conversations--expanded) .brevo-conversations__iframe-wrapper {
+  -webkit-animation: brevo-conversations-tab-button-appear 150ms ease-out 50ms both;
+  animation: brevo-conversations-tab-button-appear 150ms ease-out 50ms both;
+}
+.brevo-conversations--fast-toggle.brevo-conversations--expanded .brevo-conversations__iframe-wrapper {
+  -webkit-animation: brevo-conversations-chat-appear 150ms ease-out 50ms both;
+  animation: brevo-conversations-chat-appear 150ms ease-out 50ms both;
+}
+.brevo-conversations--fast-toggle.brevo-conversations--transparent .brevo-conversations__iframe-wrapper {
+  -webkit-animation-name: brevo-conversations-transparent-appear;
+  animation-name: brevo-conversations-transparent-appear;
+}
+.brevo-conversations--fast-toggle.brevo-conversations--expanded:not(.brevo-conversations--mobile-widget):not(.brevo-conversations--transparent) .brevo-conversations__iframe-wrapper {
+  -webkit-animation-name: brevo-conversations-chat-appear-from-bottom;
+  animation-name: brevo-conversations-chat-appear-from-bottom;
+}
+.brevo-conversations--fast-toggle.brevo-conversations--pos-top.brevo-conversations--expanded:not(.brevo-conversations--mobile-widget):not(.brevo-conversations--transparent) .brevo-conversations__iframe-wrapper {
+  -webkit-animation-name: brevo-conversations-chat-appear-from-top;
+  animation-name: brevo-conversations-chat-appear-from-top;
+}
+.brevo-conversations--expanded .brevo-conversations__iframe-wrapper {
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1),0 5px 50px rgba(0,0,0,0.2);
+  box-shadow: 0 0 3px rgba(0,0,0,0.1),0 5px 50px rgba(0,0,0,0.2);
+}
+.brevo-conversations--side-bottom {
+  bottom: 20px;
+}
+.brevo-conversations--side-left {
+  left: 20px;
+}
+.brevo-conversations--side-left.brevo-conversations--style-tab:not(.brevo-conversations--expanded) {
+  left: 10px;
+}
+.brevo-conversations--side-right {
+  right: 20px;
+}
+.brevo-conversations--side-right.brevo-conversations--style-tab:not(.brevo-conversations--expanded) {
+  right: 10px;
+}
+.brevo-conversations--side-left.brevo-conversations--expanded {
   bottom: 20px;
   left: 20px;
-  z-index: 999;
 }
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 6px;
+.brevo-conversations--side-right.brevo-conversations--expanded {
+  bottom: 20px;
+  right: 20px;
 }
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.brevo-conversations--pos-right {
+  right: 20px;
 }
-::-webkit-scrollbar-thumb {
-  background: #15c872;
-  border-radius: 3px;
+.brevo-conversations--pos-left {
+  left: 20px;
 }
-
-/* ============================================
-   PRINT STYLES
-   ============================================ */
-@media print {
-  .floating_btn,
-  header,
-  .testimonial_S,
-  #course_enquiry {
-    display: none !important;
-  }
+.brevo-conversations--pos-center {
+  left: 50%;
+}
+.brevo-conversations--pos-top.brevo-conversations--style-tab:not(.brevo-conversations--expanded) {
+  bottom: 100%;
+  margin-bottom: -20px;
+}
+.brevo-conversations--pos-top.brevo-conversations--style-round:not(.brevo-conversations--expanded) {
+  top: 20px;
+}
+.brevo-conversations--pos-bottom:not(.brevo-conversations--expanded) {
+  bottom: 20px;
+}
+.brevo-conversations--pos-middle:not(.brevo-conversations--expanded) {
+  bottom: 50%;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded:not(.brevo-conversations--transparent) {
+  max-width: none;
+  max-height: none;
+  top: 0 !important;
+  bottom: 0 !important;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded .brevo-conversations__iframe-wrapper,
+.brevo-conversations--safari.brevo-conversations--mobile-widget.brevo-conversations--expanded .brevo-conversations__iframe,
+.brevo-conversations--webkit.brevo-conversations--mobile-widget.brevo-conversations--expanded .brevo-conversations__iframe {
+  border-radius: .1px;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded.brevo-conversations--pos-right:not(.brevo-conversations--transparent) {
+  right: 0;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded.brevo-conversations--pos-left:not(.brevo-conversations--transparent) {
+  left: 0;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded.brevo-conversations--pos-center:not(.brevo-conversations--transparent) {
+  left: 0;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded.brevo-conversations--side-right:not(.brevo-conversations--transparent) {
+  right: 0;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--expanded.brevo-conversations--side-left:not(.brevo-conversations--transparent) {
+  left: 0;
+}
+.brevo-conversations--transparent.brevo-conversations--expanded {
+  bottom: 10px;
+}
+.brevo-conversations--transparent.brevo-conversations--expanded .brevo-conversations__iframe-wrapper {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.brevo-conversations--side-left.brevo-conversations--transparent,
+.brevo-conversations--pos-left.brevo-conversations--transparent {
+  left: 10px;
+}
+.brevo-conversations--side-right.brevo-conversations--transparent,
+.brevo-conversations--pos-right.brevo-conversations--transparent {
+  right: 10px;
+}
+.brevo-conversations--mobile-widget.brevo-conversations--transparent {
+  max-height: 300px;
+}
+.brevo-conversations--bg-white {
+  background: #fff;
 }
 </style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/719359309/?random=1778854987920&amp;cv=11&amp;fst=1778854987920&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=Targeted%20chat%20shown&amp;gtm=45be65d0v9165190456za20gzb9117903509zd9117903509xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938466~115938469~116701381&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.testleaf.com%2Fcourse%2Fselenium-automation-certification-training-course.html&amp;rcb=19&amp;frm=0&amp;tiba=New%20message&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1974902560.1778844679&amp;uaa=x86&amp;uab=64&amp;uafvl=Microsoft%2520Edge%3B147.0.3912.72%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.102&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3DTargeted%20chat%20shown%3Bevent_category%3DBrevo%20Conversations%3Bnon_interaction%3Dtrue&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/719359309/?random=1778855050347&amp;cv=11&amp;fst=1778855050347&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=Targeted%20chat%20rejected%20by%20visitor&amp;gtm=45be65d0v9165190456za20gzb9117903509zd9117903509xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=0~115938466~115938469~116701381&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.testleaf.com%2Fcourse%2Fselenium-automation-certification-training-course.html&amp;rcb=19&amp;frm=0&amp;tiba=Selenium%20Training%20in%20Chennai%20%7C%20Learn%20Automation%20at%20Testleaf&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1974902560.1778844679&amp;uaa=x86&amp;uab=64&amp;uafvl=Microsoft%2520Edge%3B147.0.3912.72%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.7727.102&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3DTargeted%20chat%20rejected%20by%20visitor%3Bevent_category%3DBrevo%20Conversations%3Bnon_interaction%3Dfalse&amp;rfmt=3&amp;fmt=4"></script></head>
 
